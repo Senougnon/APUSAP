@@ -1,0 +1,97 @@
+/* Styles Généraux */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 90%;  /* Un peu plus étroit sur mobile */
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Styles des Blocs */
+.info-block, .form-block, .contact-block {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.info-block, .contact-block {
+    background-color: #ffbd00;
+}
+
+/* Styles du Formulaire */
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* RESPONSIVE INPUTS:  Make sure inputs don't overflow on small screens */
+input[type="text"],
+input[type="number"],
+input[type="time"],
+input[type="tel"],
+input[type="date"],
+textarea {
+    width: 100%;  /* Important: Full width on smaller screens */
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* VERY IMPORTANT: Include padding/border in width */
+}
+
+
+button[type="submit"] {
+    background-color: #0008ff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%; /* Full width button on mobile */
+    display: block; /* Ensure it takes full width */
+}
+
+button[type="submit"]:hover {
+    background-color: #ffbd00;
+}
+
+/* Styles pour le message de confirmation */
+#confirmationMessage {
+   display: none; /*Caché par défaut */
+   color: green;
+   margin-top: 10px;
+}
+
+/* Masquer les conteneurs de dates par défaut*/
+#dateUniqueContainer, #datesMultiplesContainer {
+    display: none; /* Redondant avec le style inline, mais plus propre */
+    margin-bottom: 10px; /* Un peu d'espace */
+}
+
+/* Media Queries (Adaptation aux petits écrans) */
+@media (max-width: 768px) {  /*  768px is a common breakpoint, adjust if needed */
+
+    .container {
+        width: 95%; /* Even narrower on very small screens */
+    }
+
+    .info-block, .form-block, .contact-block {
+        padding: 15px;  /* Slightly less padding on small screens */
+    }
+
+    /*  Potentially stack form elements more vertically */
+     label {
+        margin-top: 10px; /* More space above labels */
+    }
+}
+
+/* Styles optionnels pour input[type="date"] - déjà assez responsive avec width: 100% */
